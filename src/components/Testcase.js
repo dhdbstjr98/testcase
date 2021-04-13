@@ -91,7 +91,7 @@ const Testcase = ({ currentIdx, setCurrentIdx }) => {
       </Box>
       <Box className="testcase-result-box">
         <Grid container spacing={3}>
-          <Grid item md={6}>
+          <Grid item xs={6}>
             <Box>
               <Typography>입력</Typography>
             </Box>
@@ -105,7 +105,7 @@ const Testcase = ({ currentIdx, setCurrentIdx }) => {
               />
             </FormControl>
           </Grid>
-          <Grid item md={6}>
+          <Grid item xs={6}>
             <Box>
               <Typography>출력</Typography>
             </Box>
