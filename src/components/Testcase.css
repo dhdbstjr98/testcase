@@ -1,0 +1,30 @@
+.btn-remove-testcase {
+  margin-left: auto !important;
+}
+
+.btn-test {
+  margin-left: 5px !important;
+}
+
+.btn-remove-testcase .MuiButton-startIcon {
+  margin-right: 2px !important;
+}
+
+.btn-test .MuiButton-endIcon {
+  margin-left: 4px !important;
+}
+
+.testcase-result-box {
+  margin-top: 20px;
+}
+
+.input-input-wrapper {
+  margin-top: 2px !important;
+  width: 100%;
+}
+
+.input-output-wrapper {
+  margin-top: 2px !important;
+  margin-bottom: 10px !important;
+  width: 100%;
+}

@@ -1,0 +1,46 @@
+.code-setting {
+  margin-top: 20px;
+}
+
+.code-top {
+  align-items: flex-end;
+}
+
+.expand-menu {
+  cursor: pointer;
+}
+
+.btn-expand {
+  transform: rotate(0deg);
+  margin-left: auto !important;
+  transition: transform 0.3s !important;
+}
+
+.btn-expand:hover {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.btn-expand.expand-open {
+  transform: rotate(180deg);
+}
+
+.input-language {
+  width: 120px;
+}
+
+.input-time {
+  width: 120px;
+  margin-left: 20px !important;
+}
+
+.btn-clear-all {
+  margin-left: auto !important;
+}
+
+.code-box {
+  margin-top: 20px;
+}
+
+.input-code-wrapper {
+  width: 100%;
+}

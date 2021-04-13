@@ -1,0 +1,23 @@
+.testcase-setting {
+  margin-top: 20px;
+}
+
+.input-current-idx {
+  width: 300px;
+}
+
+.btn-add-testcase {
+  margin-left: 10px !important;
+}
+
+.btn-test-all {
+  margin-left: auto !important;
+}
+
+.testcase-top {
+  align-items: flex-end;
+}
+
+.testcase-body {
+  margin-top: 10px !important;
+}

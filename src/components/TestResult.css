@@ -1,0 +1,20 @@
+.input-result-wrapper {
+  margin-top: 2px !important;
+  width: 100%;
+}
+
+.testcase-time {
+  margin-left: 5px !important;
+}
+
+.testcase-result-correct {
+  color: #2979ff;
+}
+
+.testcase-result-incorrect {
+  color: #ff1744;
+}
+
+.testcase-result-incorrect span {
+  font-weight: 700 !important;
+}
