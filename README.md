@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# testcase
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+테스트케이스 자동 검증
 
-## Available Scripts
+## About the project
+![screenshot](images/screenshot.png)
 
-In the project directory, you can run:
+본 프로젝트는 프로그래밍 과제의 오류 검증을 효율적으로 할 수 있도록 도와줍니다.
 
-### `npm start`
+코드, 입력, 출력을 받아 예상한 결과가 나타나는지 검증해줍니다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Scripts
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+실행 가능한 스크립트 목록:
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+실 사용 배포를 위해 사용합니다.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`build` 디렉토리에 빌드된 파일이 저장됩니다.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `npm run start`
+개발을 위해 (특히 프론트엔드) 사용합니다.
 
-### `npm run eject`
+[http://localhost:3000](http://localhost:3000)를 통해 실시간으로 코드가 반영되는 개발 모드로 실행됩니다.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+api는 php로 되어있기 때문에 이 모드를 이용해 실행할 경우 php를 실행할 수 있는 별도의 환경이 필요합니다.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Getting started
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Windows 환경에서 개발/테스트되었습니다.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Prerequisites
+* php7
 
-## Learn More
+api 요청을 위해 사용합니다.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* gcc (path 설정 필요)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+c/c++ 컴파일을 위해 사용합니다.
 
-### Code Splitting
+* python3
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+python 환경에서 테스트케이스 검증을 위해 사용합니다.
 
-### Analyzing the Bundle Size
+* pypy3
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+pypy 환경에서 테스트케이스 검증을 위해 사용합니다.
 
-### Making a Progressive Web App
+* node
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+node.js 환경에서 테스트케이스 검증을 위해 사용합니다.
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Installation
+1. clone the repository
+2. `npm install`
+3. `/public/api`에 `src` 디렉토리 생성 (사용자가 입력한 코드가 저장될 경로)
+unix 계열일 경우 `permission 707` 설정
+3. `npm run build`
+4. 생성된 `build` 디렉토리를 사용중인 웹서버의 루트로 지정
