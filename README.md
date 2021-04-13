@@ -53,13 +53,8 @@ node.js 환경에서 테스트케이스 검증을 위해 사용합니다.
 
 ### Installation
 1. clone the repository
-
 2. `npm install`
-
 3. `/public/api`에 `src` 디렉토리 생성 (사용자가 입력한 코드가 저장될 경로)
-
-unix 계열일 경우 `permission 707` 설정
-
-4. `npm run build`
-
-5. 생성된 `build` 디렉토리를 사용중인 웹서버의 루트로 지정
+4. (unix 계열일 경우) `permission 707` 설정
+5. `npm run build`
+6. 생성된 `build` 디렉토리를 사용중인 웹서버의 루트로 지정
