@@ -28,3 +28,15 @@
   margin-bottom: 10px !important;
   width: 100%;
 }
+
+.testcase-input-title {
+  display: inline-block;
+}
+
+.testcase-copy {
+  display: inline-block;
+  color: #2979ff;
+  margin-left: 5px !important;
+  font-size: 0.8em !important;
+  cursor: pointer;
+}

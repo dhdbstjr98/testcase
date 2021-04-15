@@ -12,7 +12,7 @@ import {
 import TestResult from "./TestResult";
 
 import DeleteIcon from "@material-ui/icons/Delete";
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { ReactReduxContext } from "react-redux";
 import testcaseAction from "./../actions/testcaseAction";
 import SendIcon from "@material-ui/icons/Send";
@@ -22,6 +22,9 @@ import executeApi from "./../api/executeApi";
 const Testcase = ({ currentIdx, setCurrentIdx }) => {
   const { store } = useContext(ReactReduxContext);
   const { code, testcases } = store.getState();
+
+  const inputInput = useRef(null);
+  const inputOutput = useRef(null);
 
   const handleRemoveClick = () => {
     const nextCurrentIdx = testcases.length === 1 ? "" : testcases.length - 2;
@@ -60,6 +63,16 @@ const Testcase = ({ currentIdx, setCurrentIdx }) => {
     );
   };
 
+  const handleInputCopyClick = () => {
+    inputInput.current.querySelector("textarea").select();
+    document.execCommand("copy");
+  };
+
+  const handleOutputCopyClick = () => {
+    inputOutput.current.querySelector("textarea").select();
+    document.execCommand("copy");
+  };
+
   return (
     <Box>
       <Box display="flex">
@@ -93,7 +106,13 @@ const Testcase = ({ currentIdx, setCurrentIdx }) => {
         <Grid container spacing={3}>
           <Grid item xs={6}>
             <Box>
-              <Typography>입력</Typography>
+              <Typography className="testcase-input-title">입력</Typography>
+              <Typography
+                className="testcase-copy"
+                onClick={handleInputCopyClick}
+              >
+                복사
+              </Typography>
             </Box>
             <FormControl className="input-input-wrapper">
               <TextField
@@ -102,12 +121,19 @@ const Testcase = ({ currentIdx, setCurrentIdx }) => {
                 variant="outlined"
                 value={testcases[currentIdx].input}
                 onChange={handleInputChange}
+                ref={inputInput}
               />
             </FormControl>
           </Grid>
           <Grid item xs={6}>
             <Box>
-              <Typography>출력</Typography>
+              <Typography className="testcase-input-title">출력</Typography>
+              <Typography
+                className="testcase-copy"
+                onClick={handleOutputCopyClick}
+              >
+                복사
+              </Typography>
             </Box>
             <FormControl className="input-output-wrapper">
               <TextField
@@ -116,6 +142,7 @@ const Testcase = ({ currentIdx, setCurrentIdx }) => {
                 variant="outlined"
                 value={testcases[currentIdx].output}
                 onChange={handleOutputChange}
+                ref={inputOutput}
               />
             </FormControl>
             {testcases[currentIdx].loading ? (
